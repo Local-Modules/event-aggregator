@@ -8,8 +8,15 @@ This is very simple event aggregator
 
 ## Usage
 
+Can be used directly
 ```ts
 import { events } from '@locmod/event-aggregator'
+```
+
+or can be used as a class
+
+```ts
+const events = new EventAggregator()
 ```
 
 ### Subscribe to event
@@ -29,7 +36,7 @@ events.subscribe('test event', console.log)
 
 ### Dispatch an event
 ```ts
-events.subscribe('test event', { value: 10 })
+events.subscribe('test event', { value: 10 }) // console.log will be called with { value: 10 }
 ```
 
 

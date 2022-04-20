@@ -6,11 +6,8 @@ import json from '@rollup/plugin-json'
 import pkg from './package.json'
 
 
-// const extensions = [ '.ts' ]
-// const babelRuntimeVersion = pkg.dependencies['@babel/runtime'].replace(/^[^0-9]*/, '')
-
 export default {
-  input: 'index.ts',
+  input: 'src/index.ts',
   output: [
     {
       file: pkg.main,
@@ -37,6 +34,5 @@ export default {
       rollupCommonJSResolveHack: false,
       clean: true,
     }),
-    // uglify(),
   ],
 }

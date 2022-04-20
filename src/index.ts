@@ -12,11 +12,7 @@ class Event {
    * Add handler to current Event
    */
   addHandler(handler: Function) {
-    this.handlers.push(handler.bind({
-      unsubscribe: () => {
-        this.removeHandler(handler)
-      },
-    }))
+    this.handlers.push(handler)
   }
 
   /**
@@ -42,7 +38,7 @@ class Event {
 }
 
 class EventAggregator {
-  events: { [index: string]: Event } 
+  events: { [index: string]: Event }
 
   constructor() {
     this.events = {}

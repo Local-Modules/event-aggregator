@@ -58,7 +58,7 @@ class EventAggregator {
     return event
   }
 
-  subscribe(name: string, handler: Function): () => void {
+  subscribe(name: string, handler: Function) {
     const event = this.getEvent(name)
 
     event.addHandler(handler)
@@ -85,7 +85,7 @@ class EventAggregator {
   /**
    * Subscribe to Event and unsubscribe after call
    */
-  once(name: string, handler: Function): { event: Event, handlerWrapper: Function } {
+  once(name: string, handler: Function) {
     const event = this.getEvent(name)
 
     const handlerWrapper = (...args: any) => {

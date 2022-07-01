@@ -1,3 +1,7 @@
 .vscode
+.idea
+jest.config.js
+rollup.config.js
+tsconfig.json
 node_modules
 src
